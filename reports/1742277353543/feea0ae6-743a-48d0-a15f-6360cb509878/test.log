@@ -1,0 +1,124 @@
+[2025-03-18 05:55:54] [1] [WARN] Reporting disabled: using no op test run registrar
+[2025-03-18 05:55:54] [1] [INFO] TEST [Automation - testGetRepository] STARTED at [06:55:54 2025-03-18]
+[2025-03-18 05:55:55] [1] [INFO] Request method:	GET
+Request URI:	https://api.github.com/repos/opierov/API-test-repo
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Body:			<none>
+HTTP/1.1 404 Not Found
+Date: Tue, 18 Mar 2025 05:55:54 GMT
+Content-Type: application/json; charset=utf-8
+X-GitHub-Media-Type: github.v3; format=json
+x-github-api-version-selected: 2022-11-28
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Content-Security-Policy: default-src 'none'
+Vary: Accept-Encoding, Accept, X-Requested-With
+Content-Encoding: gzip
+Server: github.com
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 53
+X-RateLimit-Reset: 1742279867
+X-RateLimit-Resource: core
+X-RateLimit-Used: 7
+Content-Length: 121
+X-GitHub-Request-Id: 5E2D:233F0A:611EB3A:6443B87:67D90AEA
+
+{
+    "message": "Not Found",
+    "documentation_url": "https://docs.github.com/rest/repos/repos#get-a-repository",
+    "status": "404"
+}
+
+[2025-03-18 05:55:55] [1] [ERROR] TEST [Automation - testGetRepository] FAILED at [06:55:55 2025-03-18] - 2 expectations failed.
+Expected status code <200> but was <404>.
+
+Expected status line a string containing "OK" doesn't match actual status line "HTTP/1.1 404 Not Found".
+
+
+java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1656)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+java.base/java.lang.reflect.Method.invoke(Method.java:580)
+org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1029)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:816)
+groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+java.base/java.lang.reflect.Method.invoke(Method.java:580)
+org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1029)
+groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:816)
+groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:171)
+io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+com.zebrunner.carina.api.http.HttpClient.send(HttpClient.java:37)
+com.zebrunner.carina.api.AbstractApiMethod.callAPI(AbstractApiMethod.java:301)
+com.zebrunner.carina.api.AbstractApiMethodV2.callAPI(AbstractApiMethodV2.java:189)
+com.zebrunner.carina.api.AbstractApiMethod.callAPI(AbstractApiMethod.java:279)
+com.zebrunner.carina.api.AbstractApiMethodV2.callAPI(AbstractApiMethodV2.java:181)
+com.zebrunner.carina.api.AbstractApiMethodV2.callAPIExpectSuccess(AbstractApiMethodV2.java:215)
+api.CheckGitHubTest.testGetRepository(CheckGitHubTest.java:13)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+java.base/java.lang.reflect.Method.invoke(Method.java:580)
+org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+org.testng.TestRunner.privateRun(TestRunner.java:739)
+org.testng.TestRunner.run(TestRunner.java:614)
+org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+org.testng.SuiteRunner.run(SuiteRunner.java:312)
+org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+org.testng.TestNG.runSuites(TestNG.java:1112)
+org.testng.TestNG.run(TestNG.java:1079)
+com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)

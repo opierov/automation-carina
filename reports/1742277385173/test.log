@@ -1,0 +1,27 @@
+[2025-03-18 05:56:25] [1] [INFO] 
+============= Basic configuration =============
+env=DEMO
+=========== Encryptor configuration ===========
+crypto_key_value=*****
+=========== WebDriver configuration ===========
+selenium_url=http://localhost:4444/wd/hub
+auto_screenshot=true
+localization_encoding=UTF-8
+language=en_US
+-------------- Driver capabilities ------------
+===============================================
+
+[2025-03-18 05:56:25] [1] [WARN] Reporting disabled: using no op test run registrar
+[2025-03-18 05:56:25] [1] [INFO] [TestNG] Running:
+  /Users/oleksandrpierov/Library/Caches/JetBrains/IdeaIC2024.3/temp-testng-customsuite.xml
+
+[2025-03-18 05:56:25] [1] [INFO] Set thread-count=1
+[2025-03-18 05:56:25] [1] [INFO] Set data-provider-thread-count=1
+[2025-03-18 05:56:25] [1] [INFO] CARINA_CORE_VERSION: 1.3.0
+[2025-03-18 05:56:25] [1] [INFO] Check if repository exists
+[2025-03-18 05:56:26] [1] [INFO] Repository does not exist
+[2025-03-18 05:56:26] [1] [INFO] Check if repository exists
+[2025-03-18 05:56:26] [1] [INFO] Repository does not exist
+[2025-03-18 05:56:26] [1] [INFO] INFO: '**************** Test execution summary ****************'.
+[2025-03-18 05:56:26] [1] [INFO] RESULT #1: TEST [Automation - testGetRepositoryExists [L01]] PASS [log=file:///Users/oleksandrpierov/Desktop/tools/Intellij/Automation/reports/1742277385173/1105e94b-ccff-4977-8076-d8c810c2433b/test.log]
+[2025-03-18 05:56:26] [1] [INFO] RESULT #2: TEST [Automation - testGetRepositoryExists [L02]] PASS [log=file:///Users/oleksandrpierov/Desktop/tools/Intellij/Automation/reports/1742277385173/f8518c74-64df-4644-826d-d48e95cb20cd/test.log]
