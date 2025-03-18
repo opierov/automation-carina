@@ -1,0 +1,22 @@
+[2025-03-18 01:51:15] [1] [WARN] It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [/Users/oleksandrpierov/Desktop/tools/Intellij/Automation/src/test/resources/testng.xml] otherwise TestNG may fail or not work as expected.
+[2025-03-18 01:51:15] [1] [INFO] 
+============= Basic configuration =============
+env=DEMO
+=========== Encryptor configuration ===========
+crypto_key_value=*****
+=========== WebDriver configuration ===========
+selenium_url=http://localhost:4444/wd/hub
+auto_screenshot=true
+localization_encoding=UTF-8
+language=en_US
+-------------- Driver capabilities ------------
+===============================================
+
+[2025-03-18 01:51:15] [1] [WARN] Reporting disabled: using no op test run registrar
+[2025-03-18 01:51:16] [1] [INFO] Set thread-count=1
+[2025-03-18 01:51:16] [1] [INFO] Set data-provider-thread-count=1
+[2025-03-18 01:51:16] [1] [INFO] CARINA_CORE_VERSION: 1.3.0
+[2025-03-18 01:51:18] [1] [INFO] INFO: '**************** Test execution summary ****************'.
+[2025-03-18 01:51:18] [1] [INFO] RESULT #1: TEST [API - testCreateRepository] PASS [log=file:///Users/oleksandrpierov/Desktop/tools/Intellij/Automation/reports/1742262675496/1a6873db-c09e-4a8e-8eba-1db95855a25e/test.log]
+[2025-03-18 01:51:18] [1] [INFO] RESULT #2: TEST [API - testGetRepository] PASS [log=file:///Users/oleksandrpierov/Desktop/tools/Intellij/Automation/reports/1742262675496/f4e877e7-0712-4e3c-a8f6-9bad5c9a65a2/test.log]
+[2025-03-18 01:51:18] [1] [INFO] RESULT #3: TEST [API - testDeleteRepository] PASS [log=file:///Users/oleksandrpierov/Desktop/tools/Intellij/Automation/reports/1742262675496/d140988f-e9bf-4d07-afcf-d60a63125bf7/test.log]

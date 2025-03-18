@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestAPI">
+    <test name="API">
+        <classes>
+            <class name="api.CreateGitHubTest"/>
+            <class name="api.CheckGitHubTest"/>
+            <class name="api.DeleteGitHubTest"/>
+        </classes>
+    </test>
+</suite>
