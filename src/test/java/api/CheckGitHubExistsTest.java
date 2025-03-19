@@ -26,7 +26,7 @@ public class CheckGitHubExistsTest implements IAbstractTest {
         };
     }
 
-    @Test(description = "Getting repository by name", priority = 2, dataProvider = "repositoryData")
+    @Test(description = "Getting repository by name", dataProvider = "repositoryData")
     public void testGetRepositoryExists(String repoOwner, String repoName) {
         GetRepositoryExistsMethod api = new GetRepositoryExistsMethod(repoOwner, repoName);
         api.callAPIExpectSuccess();

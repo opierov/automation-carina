@@ -16,7 +16,6 @@ import com.zebrunner.carina.utils.config.Configuration;
 public class GetRepositoryMethod extends AbstractApiMethodV2 {
 
     public GetRepositoryMethod(String owner, String repo) {
-
         replaceUrlPlaceholder("base_url", Configuration.getRequired("api_url"));
         replaceUrlPlaceholder("OWNER", owner);
         replaceUrlPlaceholder("REPO", repo);
