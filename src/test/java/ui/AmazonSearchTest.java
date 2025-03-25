@@ -1,7 +1,7 @@
 package ui;
 
 import com.zebrunner.carina.core.IAbstractTest;
-import org.openqa.selenium.WebDriver;
+import org.example.ui.components.HeaderComponent;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.example.ui.pages.AmazonHomePage;
@@ -15,7 +15,7 @@ public class AmazonSearchTest implements IAbstractTest {
         AmazonHomePage homePage = new AmazonHomePage(getDriver());
         homePage.open();
 
-        System.out.println("Please resolve the CAPTCHA manually in the browser, then press ENTER to continue...");
+        System.out.println("Please pass the CAPTCHA manually in the browser, then press ENTER to continue...");
         try {
             System.in.read();
         } catch (Exception e) {
@@ -24,8 +24,10 @@ public class AmazonSearchTest implements IAbstractTest {
         //Verify page is opened
         Assert.assertTrue(homePage.isPageOpened(), "Amazon home page is not opened");
         //Search "Laptop"
-        SearchResultsPage resultsPage = homePage.searchForProduct("Laptop");
+        HeaderComponent header = homePage.getHeader();
+        header.searchForProduct("Laptop");
         //Verify search
-        Assert.assertTrue(resultsPage.hasResults(), "Search results are not displayed");
+        SearchResultsPage resultsPage = new SearchResultsPage(getDriver());
+        Assert.assertTrue(resultsPage.ifFound(), "Search results are not displayed");
     }
 }

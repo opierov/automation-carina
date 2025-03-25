@@ -8,13 +8,13 @@ import org.openqa.selenium.support.FindBy;
 public class SearchResultsPage extends AbstractPage {
 
     @FindBy(css = "div.s-main-slot")
-    private ExtendedWebElement resultsContainer;
+    private ExtendedWebElement resultsCatalog;
 
     public SearchResultsPage(WebDriver driver) {
         super(driver);
     }
 
-    public boolean hasResults() {
-        return resultsContainer.isDisplayed();
+    public boolean ifFound() {
+        return resultsCatalog.isDisplayed();
     }
 }

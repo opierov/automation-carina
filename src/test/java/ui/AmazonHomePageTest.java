@@ -1,7 +1,6 @@
 package ui;
 
 import com.zebrunner.carina.core.IAbstractTest;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.example.ui.pages.AmazonHomePage;
@@ -14,7 +13,7 @@ public class AmazonHomePageTest implements IAbstractTest {
         AmazonHomePage homePage = new AmazonHomePage(getDriver());
         homePage.open();
 
-        System.out.println("If a CAPTCHA appears, please pass it manually in the browser, then press ENTER...");
+        System.out.println("Please pass the CAPTCHA manually in the browser, then press ENTER to continue...");
         try {
             System.in.read();
         } catch (Exception e) {

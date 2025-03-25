@@ -1,7 +1,8 @@
 package ui;
 
 import com.zebrunner.carina.core.IAbstractTest;
-import org.openqa.selenium.WebDriver;
+import org.example.ui.components.HeaderComponent;
+import org.example.ui.components.LoginComponent;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.example.ui.pages.AmazonHomePage;
@@ -15,7 +16,7 @@ public class AmazonSignInTest implements IAbstractTest {
         AmazonHomePage homePage = new AmazonHomePage(getDriver());
         homePage.open();
 
-        System.out.println("Please resolve CAPTCHA manually in the browser, then press ENTER to continue...");
+        System.out.println("Please pass CAPTCHA manually in the browser, then press ENTER to continue...");
         try {
             System.in.read();
         } catch (Exception e) {
@@ -23,17 +24,16 @@ public class AmazonSignInTest implements IAbstractTest {
         }
         //Click and open sign in page
         AmazonSignInPage signInPage = homePage.goToSignInPage();
+        LoginComponent login = signInPage.getLoginComponent();
         //Verify sign in page
-        Assert.assertTrue(signInPage.isPageOpened(), "Sign in page is not opened");
-        //Enter email and click
-        signInPage.enterEmail("mail@gmail.com");
-        signInPage.clickContinue();
-        //Enter pass and click
-        signInPage.enterPass("pass");
-        signInPage.clickSignIn();
-        //Verify logged home page
-        Assert.assertTrue(homePage.isHelloDisplayed(), "Greeting is not displayed!");
-        Assert.assertEquals(homePage.getHelloText(), "Hello, Oleksandr", "Greeting text does not match!");
+        login.enterEmail("your_user");
+        login.clickContinue();
+        login.enterPassword("your_pass");
+        login.clickSignIn();
+        //Verify home page after authorization
+        HeaderComponent header = homePage.getHeader();
+        Assert.assertTrue(header.isAccountGreetingDisplayed(), "Greeting is not displayed!");
+        Assert.assertEquals(header.getAccountGreetingText(), "Hello, Oleksandr", "Greeting text does not match!");
 
     }
 }
