@@ -11,8 +11,8 @@ public class AmazonSearchTest implements IAbstractTest {
 
     @Test
     public void testSearchProduct() {
-        WebDriver driver = getDriver();
-        AmazonHomePage homePage = new AmazonHomePage(driver);
+        //Open Amazon home page
+        AmazonHomePage homePage = new AmazonHomePage(getDriver());
         homePage.open();
 
         System.out.println("Please resolve the CAPTCHA manually in the browser, then press ENTER to continue...");
@@ -21,11 +21,11 @@ public class AmazonSearchTest implements IAbstractTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        //Verify page is opened
         Assert.assertTrue(homePage.isPageOpened(), "Amazon home page is not opened");
-
+        //Search "Laptop"
         SearchResultsPage resultsPage = homePage.searchForProduct("Laptop");
-
+        //Verify search
         Assert.assertTrue(resultsPage.hasResults(), "Search results are not displayed");
     }
 }

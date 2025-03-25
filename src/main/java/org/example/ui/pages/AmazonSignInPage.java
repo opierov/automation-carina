@@ -4,9 +4,6 @@ import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
 
 public class AmazonSignInPage extends AbstractPage {
 
@@ -43,8 +40,6 @@ public class AmazonSignInPage extends AbstractPage {
     }
 
     public boolean isPageOpened() {
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(emailInput));
         return emailInput.isDisplayed();
     }
 }

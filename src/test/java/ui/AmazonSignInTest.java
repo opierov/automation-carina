@@ -11,8 +11,8 @@ public class AmazonSignInTest implements IAbstractTest {
 
     @Test
     public void testNavigateToSignInPage() {
-        WebDriver driver = getDriver();
-        AmazonHomePage homePage = new AmazonHomePage(driver);
+        //Open Amazon home page
+        AmazonHomePage homePage = new AmazonHomePage(getDriver());
         homePage.open();
 
         System.out.println("Please resolve CAPTCHA manually in the browser, then press ENTER to continue...");
@@ -21,15 +21,17 @@ public class AmazonSignInTest implements IAbstractTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        //Click and open sign in page
         AmazonSignInPage signInPage = homePage.goToSignInPage();
-
+        //Verify sign in page
         Assert.assertTrue(signInPage.isPageOpened(), "Sign in page is not opened");
-        signInPage.enterEmail("test@gmail.com");
+        //Enter email and click
+        signInPage.enterEmail("mail@gmail.com");
         signInPage.clickContinue();
-        signInPage.enterPass("your_password");
+        //Enter pass and click
+        signInPage.enterPass("pass");
         signInPage.clickSignIn();
-
+        //Verify logged home page
         Assert.assertTrue(homePage.isHelloDisplayed(), "Greeting is not displayed!");
         Assert.assertEquals(homePage.getHelloText(), "Hello, Oleksandr", "Greeting text does not match!");
 

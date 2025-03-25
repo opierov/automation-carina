@@ -4,9 +4,6 @@ import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
 
 public class AmazonHomePage extends AbstractPage {
 
@@ -29,17 +26,6 @@ public class AmazonHomePage extends AbstractPage {
         super(driver);
     }
 
-/*    @Override
-    public void open() {
-        super.open();
-    }*/
-
-    public boolean isPageOpened() {
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(searchBox));
-        return searchBox.isDisplayed();
-    }
-
     public SearchResultsPage searchForProduct(String product) {
         searchBox.type(product);
         searchButton.click();
@@ -47,14 +33,10 @@ public class AmazonHomePage extends AbstractPage {
     }
 
     public boolean isAmazonLogoDisplayed() {
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(amazonLogo));
         return amazonLogo.isDisplayed();
     }
 
     public AmazonSignInPage goToSignInPage() {
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(signInButton));
         signInButton.click();
         return new AmazonSignInPage(getDriver());
     }

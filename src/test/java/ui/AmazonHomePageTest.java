@@ -10,17 +10,19 @@ public class AmazonHomePageTest implements IAbstractTest {
 
     @Test
     public void testAmazonLogoIsDisplayed() {
-        WebDriver driver = getDriver();
-        AmazonHomePage homePage = new AmazonHomePage(driver);
+        //Open Amazon home page
+        AmazonHomePage homePage = new AmazonHomePage(getDriver());
         homePage.open();
 
-        System.out.println("If a CAPTCHA appears, please solve it manually in the browser, then press ENTER...");
+        System.out.println("If a CAPTCHA appears, please pass it manually in the browser, then press ENTER...");
         try {
             System.in.read();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        //Verify page is opened
+        Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened");
+        //Verify element is displayed
         Assert.assertTrue(homePage.isAmazonLogoDisplayed(), "Amazon logo is not displayed");
     }
 }
