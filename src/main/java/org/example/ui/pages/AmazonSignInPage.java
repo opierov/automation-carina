@@ -8,11 +8,11 @@ import org.openqa.selenium.support.FindBy;
 
 public class AmazonSignInPage extends AbstractPage {
 
+    @FindBy(id = "authportal-main-section") // Ensure this matches the correct parent container
     private LoginComponent loginComponent;
 
     public AmazonSignInPage(WebDriver driver) {
         super(driver);
-        this.loginComponent = new LoginComponent(driver);
     }
 
     public LoginComponent getLoginComponent() {

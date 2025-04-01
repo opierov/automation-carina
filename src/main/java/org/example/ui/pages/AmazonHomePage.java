@@ -8,7 +8,8 @@ import org.openqa.selenium.support.FindBy;
 
 public class AmazonHomePage extends AbstractPage {
 
-    private HeaderComponent header;
+    @FindBy(id = "nav-belt")  // Use the correct parent locator for the header
+    private HeaderComponent headerComponent;
 
     @FindBy(id = "nav-logo-sprites")
     private ExtendedWebElement amazonLogo;
@@ -18,11 +19,10 @@ public class AmazonHomePage extends AbstractPage {
 
     public AmazonHomePage(WebDriver driver) {
         super(driver);
-        this.header = new HeaderComponent(driver);
     }
 
-    public HeaderComponent getHeader() {
-        return header;
+    public HeaderComponent getHeaderComponent() {
+        return headerComponent;
     }
 
     public boolean isAmazonLogoDisplayed() {

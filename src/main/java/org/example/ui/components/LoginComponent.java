@@ -2,6 +2,7 @@ package org.example.ui.components;
 
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractUIObject;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
@@ -19,8 +20,8 @@ public class LoginComponent extends AbstractUIObject {
     @FindBy(id = "signInSubmit")
     private ExtendedWebElement signInButton;
 
-    public LoginComponent(WebDriver driver) {
-        super(driver);
+    public LoginComponent(WebDriver driver, SearchContext searchContext) {
+        super(driver, searchContext);
     }
 
     public void enterEmail(String email) {
