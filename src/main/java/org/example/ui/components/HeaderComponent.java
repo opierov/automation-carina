@@ -9,12 +9,18 @@ import org.openqa.selenium.support.FindBy;
 public class HeaderComponent extends AbstractUIObject {
 
     @FindBy(id = "twotabsearchtextbox")
+    @FindBy(xpath = "//input[@id='twotabsearchtextbox']")
+    @FindBy(xpath = ".//input[contains(@id, 'twotabsearchtextbox')]")
     private ExtendedWebElement searchBox;
 
     @FindBy(id = "nav-search-submit-button")
+    @FindBy(xpath = "//input[@id='nav-search-submit-button']")
+    @FindBy(xpath = ".//input[contains(@id, 'nav-search-submit-button')]")
     private ExtendedWebElement searchButton;
 
     @FindBy(id = "nav-link-accountList-nav-line-1")
+    @FindBy(xpath = "//span[@id='nav-link-accountList-nav-line-1']")
+    @FindBy(xpath = ".//span[contains(@id, 'nav-link-accountList-nav-line-1')]")
     private ExtendedWebElement accountGreeting;
 
     public HeaderComponent(WebDriver driver, SearchContext searchContext) {

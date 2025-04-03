@@ -15,7 +15,7 @@ public class AmazonTests implements IAbstractTest {
     private AmazonHomePage homePage;
 
     @BeforeMethod
-    public void setUp() {
+    public void start() {
         homePage = new AmazonHomePage(getDriver());
         homePage.open();
 
@@ -43,7 +43,7 @@ public class AmazonTests implements IAbstractTest {
 
         login.enterEmail("username");
         login.clickContinue();
-        login.enterPassword("pass");
+        login.enterPassword("password");
         login.clickSignIn();
 
         HeaderComponent header = homePage.getHeaderComponent();

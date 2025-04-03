@@ -9,15 +9,23 @@ import org.openqa.selenium.support.FindBy;
 public class LoginComponent extends AbstractUIObject {
 
     @FindBy(id = "ap_email")
+    @FindBy(xpath = "//input[@id='ap_email']")
+    @FindBy(xpath = ".//input[contains(@id, 'ap_email')]")
     private ExtendedWebElement emailInput;
 
     @FindBy(id = "continue")
+    @FindBy(xpath = "//input[@id='continue']")
+    @FindBy(xpath = ".//input[contains(@id, 'continue')]")
     private ExtendedWebElement continueButton;
 
     @FindBy(id = "ap_password")
+    @FindBy(xpath = "//input[@id='ap_password']")
+    @FindBy(xpath = ".//input[contains(@id, 'ap_password')]")
     private ExtendedWebElement passInput;
 
     @FindBy(id = "signInSubmit")
+    @FindBy(xpath = "//input[@id='signInSubmit']")
+    @FindBy(xpath = ".//input[contains(@id, 'signInSubmit')]")
     private ExtendedWebElement signInButton;
 
     public LoginComponent(WebDriver driver, SearchContext searchContext) {
